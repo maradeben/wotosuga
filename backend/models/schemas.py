@@ -34,5 +34,6 @@ class FormData:
     PhysHlth:               int = Form(...)
     DiffWalk:               int = Form(...)
     Age:                    int = Form(...)
+    Sex:                    int = Form(...)
     Education:              int = Form(...)
     Income:                 int = Form(...)

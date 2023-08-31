@@ -12,9 +12,11 @@ import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
 
-# define file path
+# define file paths
 model_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                             'storage', 'gradboost_model.pkl')
+dataset_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                            'storage', 'diabetes_012_health_indicators_BRFSS2015.csv')
 
 # load model
 with open(model_path, 'rb') as file:
@@ -130,13 +132,13 @@ def get_prediction(dataset):
         dataset: the dataset to predict on
     
     Returns:
-        the value of the prediction
+        prediction
     """
 
     wrangled_data = wrangle(dataset)
     prediction = pred_model.predict(wrangled_data)
 
-    return (prediction)
+    return (int(prediction[0]))
 
 if __name__ == "__main__":
     dataset = json.loads(sys.argv[1])

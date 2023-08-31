@@ -10,9 +10,14 @@ from pydantic import BaseModel
 from dataclasses import dataclass
 import os
 import json
+import base64
+import io
+import matplotlib
+matplotlib.use('AGG')
 
 from backend.models.schemas import FormData
-from backend.models.predictor import get_prediction
+# from backend.models.predictor import get_prediction
+from backend.utils.result_generator import generate_results
 
 
 app = FastAPI()
@@ -65,9 +70,23 @@ def predict(request: Request, form_data: FormData = Depends()):
     Get data from prediction function
     """
     dataset = form_data.__dict__
-    # result = dataset
-    name = dataset.pop('Name')
-    result = f"You are {'Diabetic' if get_prediction(dataset) else 'Not Diabetic'}"
+    # # result = dataset
+    # name = dataset.pop('Name')
+    results = generate_results(dataset)
 
-    return templates.TemplateResponse('results.html',
-                                        context={'request':request, 'results':result})
+    image_keys = ['diagnosis_plot', 'bmi_category_plot', 'bmi_distribution_plot']
+    for image in image_keys:
+        buf = io.BytesIO()
+        results[image].savefig(buf, format="png")
+        encoded = base64.encodebytes(buf.getvalue())
+        decoded = base64.decodebytes(encoded)
+        results[image] = decoded
+        # buf.close()
+
+    # encode images
+    # results['diagnosis_plot'] = base64.b64encode(results['diagnosis_plot']).decode('utf-8')
+    # results['bmi_category_plot'] = base64.b64encode(results['bmi_category_plot']).decode('utf-8')
+    # results['bmi_distribution_plot'] = base64.b64encode(results['bmi_distribution_plot']).decode('utf-8')
+
+    results["request"] = request
+    return templates.TemplateResponse('results.html', context=results)
