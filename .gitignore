@@ -3,3 +3,5 @@ playground.ipynb
 /frontend/templates/test.html
 /frontend/templates/test_result.html
 .gitignore
+*.png
+*.pdf
