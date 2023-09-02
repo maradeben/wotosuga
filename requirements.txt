@@ -1,0 +1,70 @@
+annotated-types==0.5.0
+anyio==3.7.1
+asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+Bottleneck @ file:///work/ci_py311/bottleneck_1676827011612/work
+click==8.1.7
+comm @ file:///work/ci_py311/comm_1677709131612/work
+contourpy @ file:///work/ci_py311/contourpy_1676827066340/work
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+debugpy @ file:///croot/debugpy_1690905042057/work
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+fastapi==0.102.0
+fonttools==4.25.0
+h11==0.14.0
+idna==3.4
+imbalanced-learn==0.11.0
+imblearn==0.0
+ipykernel @ file:///croot/ipykernel_1691121631942/work
+ipython @ file:///croot/ipython_1691532092695/work
+jedi @ file:///work/ci_py311_2/jedi_1679336495545/work
+Jinja2==3.1.2
+joblib==1.3.2
+jupyter_client @ file:///croot/jupyter_client_1680171862562/work
+jupyter_core @ file:///croot/jupyter_core_1679906564508/work
+kiwisolver @ file:///work/ci_py311/kiwisolver_1676827230232/work
+MarkupSafe==2.1.3
+matplotlib @ file:///croot/matplotlib-suite_1679593461707/work
+matplotlib-inline @ file:///work/ci_py311/matplotlib-inline_1676823841154/work
+mkl-fft==1.3.6
+mkl-random @ file:///work/mkl/mkl_random_1682950433854/work
+mkl-service==2.4.0
+munkres==1.1.4
+nest-asyncio @ file:///work/ci_py311/nest-asyncio_1676823382924/work
+numexpr @ file:///croot/numexpr_1683221822650/work
+numpy @ file:///croot/numpy_and_numpy_base_1691091611330/work
+packaging @ file:///croot/packaging_1678965309396/work
+pandas @ file:///croot/pandas_1692289311655/work
+parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
+pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow==9.4.0
+platformdirs @ file:///croot/platformdirs_1692205439124/work
+prompt-toolkit @ file:///work/ci_py311/prompt-toolkit_1676824857154/work
+psutil @ file:///work/ci_py311_2/psutil_1679337388738/work
+ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+pydantic==2.3.0
+pydantic_core==2.6.3
+Pygments @ file:///croot/pygments_1684279966437/work
+pyparsing @ file:///work/ci_py311/pyparsing_1677811559502/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-multipart==0.0.6
+pytz @ file:///work/ci_py311/pytz_1676825004346/work
+pyzmq @ file:///croot/pyzmq_1686601365461/work
+reportlab==4.0.4
+scikit-learn==1.2.2
+scipy==1.11.2
+seaborn @ file:///work/ci_py311/seaborn_1676845747354/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+sniffio==1.3.0
+stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+starlette==0.27.0
+threadpoolctl==3.2.0
+tornado @ file:///croot/tornado_1690848263220/work
+traitlets @ file:///work/ci_py311/traitlets_1676823305040/work
+typing_extensions==4.7.1
+tzdata @ file:///croot/python-tzdata_1690578112552/work
+uvicorn==0.23.2
+wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
