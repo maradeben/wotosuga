@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <meta charset="UTF-8">
+        <title>Echo Parrot</title>
+        <body>
+            <h1>Predictions Page</h1>
+            <p>Say something and I'll echo it</p>
+            <form method="post">
+                <label for="name">Name:</label>
+                <input type="text" name="name" placeholder="Jane Doe">
+                <br>
+                <label for="said">Say something nice:</label>
+                <input type="text" name="said" placeholder="Listening...">
+                <br>
+                <label for="nick">Nickname</label>
+                <input type="text" name="nick" placeholder="gba">
+                <input type="submit">
+            </form>
+            <p>Result: {{result}}</p>
+        </body>
+
+    </html>

@@ -5,17 +5,27 @@ Main entry point of the app
 
 from fastapi import FastAPI, Request, Form, Depends
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 from typing import Union, Any, Dict, Annotated
 from pydantic import BaseModel
 from dataclasses import dataclass
 import os
 import json
+import base64
+import io
+import matplotlib
+matplotlib.use('AGG')
+import matplotlib.pyplot as plt
 
 from backend.models.schemas import FormData
-from backend.models.predictor import get_prediction
+# from backend.models.predictor import get_prediction
+from backend.utils.result_generator import generate_results
+from backend.utils import static_dir
 
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory=static_dir),
+                name="static")
 templates = Jinja2Templates(directory=os.path.join(os.getcwd(), "frontend", "templates"))
 
 @dataclass
@@ -65,9 +75,9 @@ def predict(request: Request, form_data: FormData = Depends()):
     Get data from prediction function
     """
     dataset = form_data.__dict__
-    # result = dataset
-    name = dataset.pop('Name')
-    result = f"You are {'Diabetic' if get_prediction(dataset) else 'Not Diabetic'}"
+    # # result = dataset
+    # name = dataset.pop('Name')
+    results = generate_results(dataset)
 
-    return templates.TemplateResponse('results.html',
-                                        context={'request':request, 'results':result})
+    results["request"] = request
+    return templates.TemplateResponse('results.html', context=results)

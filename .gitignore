@@ -1,7 +1,0 @@
-playground.ipynb
-**/__pycache__
-/frontend/templates/test.html
-/frontend/templates/test_result.html
-.gitignore
-*.png
-*.pdf

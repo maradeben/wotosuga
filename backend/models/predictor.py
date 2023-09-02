@@ -132,13 +132,13 @@ def get_prediction(dataset):
         dataset: the dataset to predict on
     
     Returns:
-        the value of the prediction
+        prediction
     """
 
     wrangled_data = wrangle(dataset)
     prediction = pred_model.predict(wrangled_data)
 
-    return (prediction)
+    return (int(prediction[0]))
 
 if __name__ == "__main__":
     dataset = json.loads(sys.argv[1])
