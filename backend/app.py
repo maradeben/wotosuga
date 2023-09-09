@@ -81,3 +81,36 @@ def predict(request: Request, form_data: FormData = Depends()):
 
     results["request"] = request
     return templates.TemplateResponse('results.html', context=results)
+
+
+    name: str = Form(...)
+    said: str = Form(...)
+    nick: str = Form(...)
+
+@app.get('/blog')
+def blog(request: Request):
+    """ Blog Page """
+    return templates.TemplateResponse('blog.html', context={'request': request})
+    
+    name: str = Form(...)
+    said: str = Form(...)
+    nick: str = Form(...)
+
+@app.get('/specialists')
+def specialists(request: Request):
+    """ Healthcare Specialists Page """
+    return templates.TemplateResponse('specialists.html', context={'request': request})
+
+@app.get('/profile')
+def profile(request: Request):
+    """ Home Page """
+    return templates.TemplateResponse('profile.html', context={'request': request})
+
+    name: str = Form(...)
+    said: str = Form(...)
+    nick: str = Form(...)
+
+@app.get('/dev')
+def dev(request: Request):
+    """ Home Page """
+    return templates.TemplateResponse('dev.html', context={'request': request})

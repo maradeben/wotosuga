@@ -10,7 +10,7 @@ def generate_results(data):
 
     name = data['Name']
     diag = "Diabetic" if get_prediction(data) else "Non-diabetic"
-    bmi = preprocess(data)['BMI']
+    bmi = round(preprocess(data)['BMI'], 2)
     diag_plot = plots.plot_diag_by_bmi_sex(diag, data['Sex'], data['id'])[1]
     bmi_cat_plot = plots.plot_bmi_category(bmi, data['id'])[1]
     bmi_dist_plot = plots.plot_bmi_dist(bmi, data['id'])[1]

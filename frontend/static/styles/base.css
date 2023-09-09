@@ -2,24 +2,34 @@ header {
     background: #2980b9;
     height: 70px;
     width: 100%;
+    font-family: Arial;
     border-bottom: 1px solid #558b2f;
 }
 
+header a {
+    font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px
+}
+
 header #logo {
-    background: #558b2f;
-    left: 20px;
+    float: left;
     height: 100%;
+    background: ;
 }
 
 header #dev {
-    background: #558b2f;
-    right: 20px;
-    heigot: 100%;
+    float: right;
+    height: 100%;
 }
 
 .footer-menu {
     background-color: #d9f0e3;
     padding: 20px 0;
+    align-items: center;
 }
 
 .footer-menu ul {
