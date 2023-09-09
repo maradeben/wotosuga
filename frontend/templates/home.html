@@ -1,13 +1,49 @@
 <!DOCTYPE html>
     <html lang="en">
+    <head>
         <meta charset="UTF-8">
-        <title>Wotosuga - Home</title>
+        <title>{% block title %}Wotosuga - Home{% endblock %}</title>
+        
+        <link rel="stylesheet" type="text/css" href="../static/styles/base.css">
+    </head>
         <body>
             <header>
-                <p id='logo'>WO'TOSUGA</p>
-                <p id='dev'>maradeben</p>
-            <button onclick="location.href='/predict';">Go to Predictions</button>
+                <p id='logo'><a href="/">WO'TOSUGA</a></p>
+                <p id='dev'><a href="/dev">{dev}:maradeben</a></p>
+            </header>
             {% block content %}
+            <h1>Welcome to Wo'tosuga</h1>
+            <h3 id="tagline">Your personal AI diabetes assisstant<h3>
+              <button onclick="location.href='/predict';">Go to Predictions</button>
+              <div id="intro">
+                  <p>According to the World Health Organization (WHO), diabetes is a major public health problem. In 2021, an estimated 463 million adults (aged 18 years and older) had diabetes. This number is expected to rise to 642 million by 2040.</p>
+                  <p>There are a number of things that can be done to reduce the burden of diabetes. These include:</p>
+                  <ul>
+                      <li>Early diagnosis and treatment: Early diagnosis and treatment of diabetes can help to prevent complications.</li>
+                      <li>Prevention: There are a number of things that can be done to prevent diabetes, such as maintaining a healthy weight, being physically active, and eating a healthy diet.</li>
+                      <li>Improving access to care: People with diabetes need access to quality care, including medication, regular checkups, and education.</li>
+                      <li>Research: There is ongoing research into new treatments and prevention strategies for diabetes.</li>
+                  </ul>
+                  <p>AI will play a vital role in reducing this burden, and that is why Wo'tosuga is here. With this personal assisstant, you get:
+                  <ul>
+                      <li>A provisional diagnosis with no  hospitals, labs, or needle-pricks.</li>
+                      <li>Access to healthcare providers and specialists involved in various aspects of Diabetes care<li>
+                      <li>Educative materials to keep you informed and updated</li>
+                  </ul>
+                  
+               <div><button onclick="location.href='/predict':">Get your diabetes risk now</button></div> 
             {% endblock %}
+            <footer>
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/predict">Predict</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/specialist">Specialists</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                   </ul>
+                </nav>
+                <p class="disclaimer">This is only experimental!</p>
+            </footer>
         </body>
     </html>

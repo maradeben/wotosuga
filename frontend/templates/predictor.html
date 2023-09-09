@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-    <html lang="en">
-        <meta charset="UTF-8">
-        <title>Wo'tosuga - Predctions</title>
-        <body>
-            <h1>Predictions Page</h1>
+{% extends "home.html"%}
+
+{% block title %} Wo'tosuga - Predict {% endblock %}
+{% block content %}
+            <h1 class="page-title">Prediction</h1>
             <p>Say something and I'll echo it</p>
             <form method="post">
                 <label for="name">Name</label>
@@ -125,7 +124,4 @@
                 <br>
                 <input type="submit">
             </form>
-            <!-- <p>Result: {{result}}</p> -->
-        </body>
-
-    </html>
+{% endblock %}

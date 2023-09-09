@@ -6,6 +6,14 @@ from dataclasses import dataclass
 from fastapi import Form
 import uuid
 
+
+@dataclass
+class TestData:
+    name: str = Form(...)
+    said: str = Form(...)
+    nick: str = Form(...)
+   
+
 # define schema for form data
 @dataclass
 class FormData:

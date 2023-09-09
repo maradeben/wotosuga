@@ -1,0 +1,40 @@
+header {
+    background: #2980b9;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #558b2f;
+}
+
+header #logo {
+    background: #558b2f;
+    left: 20px;
+    height: 100%;
+}
+
+header #dev {
+    background: #558b2f;
+    right: 20px;
+    heigot: 100%;
+}
+
+.footer-menu {
+    background-color: #d9f0e3;
+    padding: 20px 0;
+}
+
+.footer-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-menu ul li a {
+    color: #2980b9;
+    text-decoration: none;
+}
+

@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Wo'tosuga - Results</title>
-            <link href="{{ url_for('predict') }}"/>
-        </head>
-        <body>
-            <h1>Results Page</h1>
+{% extends "home.html" %}
+{% block title %}Wo'tosuga - Results{% endblock %}
+{% block content %}
+            <h1 class="page-title">Results</h1>
             <p>Dear <h2>{{name}},</h2> your results are here.</p>
             <p>BMI: {{bmi}}</p>
             <p><b>Risk Status: {{diagnosis}}</b></p>
@@ -20,5 +15,4 @@
             <p>Lorem ipsum and stuff. Eat good food and exercise. More stories later.
                 Let's see if this thing works first.
             </p>
-        </body>
-    </html>
+{% endblock %}
