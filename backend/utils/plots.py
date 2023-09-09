@@ -30,7 +30,7 @@ sex_encodings = ['F', 'M']
 age_encodings = age_encodings
 
 
-def plot_bmi_dist(bmi):
+def plot_bmi_dist(bmi, id):
     """ Plot BMI distribution
 
     Args:
@@ -40,7 +40,7 @@ def plot_bmi_dist(bmi):
         (fig, save_path) (plt.figure, str(path where file is saved))
     """
 
-    fig = plt.figure(figsize=(6,5))
+    fig = plt.figure(figsize=(5,4))
     bins = np.arange(df.BMI.min(), df.BMI.max()+1, 1)
     plt.hist(data=df, x='BMI', bins=bins);
     plt.bar(x=bmi, height=28000, width=.3, color='red', hatch='/')
@@ -52,12 +52,12 @@ def plot_bmi_dist(bmi):
     plt.xlabel('BMI', fontdict=axes_style)
     plt.ylabel('Frequency', fontdict=axes_style)
 
-    save_path = "charts/bmi_dist.png"
-    plt.savefig(os.path.join(static_dir, save_path))
+    save_path = f"charts/{id}-bmi_dist.jpg"
+    plt.savefig(os.path.join(static_dir, save_path), dpi=200)
 
     return (fig, save_path)
 
-def plot_diag_by_bmi_sex(diag, sex):
+def plot_diag_by_bmi_sex(diag, sex, id):
     """ Plot diagnosis by BMI and Sex
 
     Args:
@@ -68,7 +68,7 @@ def plot_diag_by_bmi_sex(diag, sex):
         figure(plt.figure)
     """
 
-    fig = plt.figure(figsize=(6,5))
+    fig = plt.figure(figsize=(5,4))
     g = sns.barplot(data=df, x='Sex', y='BMI', hue='Diabetes_01');
 
     idx = 0
@@ -92,8 +92,8 @@ def plot_diag_by_bmi_sex(diag, sex):
     for t,l in zip(g.legend_.texts, diab_bin_encodings):
         t.set_text(l)
     
-    save_path = "charts/diag_bmi_sex.png"
-    plt.savefig(os.path.join(static_dir, save_path))
+    save_path = f"charts/{id}-diag_bmi_sex.jpg"
+    plt.savefig(os.path.join(static_dir, save_path), dpi=200)
     
     return (fig, save_path)
 
@@ -114,7 +114,7 @@ def categorize_bmi(value):
     elif value>=40.0:
         return 5
 
-def plot_bmi_category(bmi):
+def plot_bmi_category(bmi, id):
     """ Categorize BMI
 
     Arg:
@@ -125,7 +125,7 @@ def plot_bmi_category(bmi):
     """
 
     df['BMICategory'] = df.BMI.apply(categorize_bmi)
-    fig=plt.figure(figsize=(6,5))
+    fig=plt.figure(figsize=(5,4))
     g = sns.countplot(data=df, y='BMICategory', color=primary, orient='h', order = [5,4,3,2,1]);
 
     g.patches[5 - (categorize_bmi(bmi))].set_edgecolor('red')
@@ -136,8 +136,8 @@ def plot_bmi_category(bmi):
     plt.ylabel('');
     plt.title('BMI Categories', fontdict=title_style);
 
-    save_path = "charts/bmi_cat.png"
-    plt.savefig(os.path.join(static_dir, save_path))
+    save_path = f"charts/{id}-bmi_cat.jpg"
+    plt.savefig(os.path.join(static_dir, save_path), dpi=200)
 
     return (fig, save_path)
 

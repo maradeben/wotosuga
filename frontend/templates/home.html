@@ -3,10 +3,11 @@
         <meta charset="UTF-8">
         <title>Wotosuga - Home</title>
         <body>
-            <h1 style="text-align: center;">Welcome to WO'TOSUGA</h1>
+            <header>
+                <p id='logo'>WO'TOSUGA</p>
+                <p id='dev'>maradeben</p>
             <button onclick="location.href='/predict';">Go to Predictions</button>
-            <!-- <form action="/predict">
-                <button>Go to Predictons</button>
-            </form> -->
+            {% block content %}
+            {% endblock %}
         </body>
     </html>

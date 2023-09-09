@@ -4,6 +4,7 @@ FormData: form data schema, as gotten from the predictions form
 """
 from dataclasses import dataclass
 from fastapi import Form
+import uuid
 
 # define schema for form data
 @dataclass
@@ -11,6 +12,7 @@ class FormData:
     """ This class defines the schema for the form data
     associated with the prediction form
     """
+    id:                        str= uuid.uuid4()
     Name:                   str = Form(...)
     HighBP:                 int = Form(...)
     HighChol:               int = Form(...)
