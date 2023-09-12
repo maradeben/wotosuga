@@ -1,9 +1,16 @@
 {% extends "home.html"%}
 
-{% block title %} Wo'tosuga - Predict {% endblock %}
+<link href= "../styles/form.css" rel="stylesheet" type="text/css">
+
+{% block title %}Wo'tosuga - Predict{% endblock %}
+
+{% block header_image %}{% endblock %}
+{% block page_header %}
+<h1 class="page-title">Prediction</h1>
+
+{% endblock %}
+
 {% block content %}
-            <h1 class="page-title">Prediction</h1>
-            <p>Say something and I'll echo it</p>
             <form method="post">
                 <label for="name">Name</label>
                 <input type="text" name="Name" id="name" placeholder="Enter name" value="Jane Doe">
@@ -11,13 +18,13 @@
                 <label for="age">Age</label>
                 <input type="number" step="1" name="Age" id="age" placeholder="Enter age" value="45">
                 <br>
-                <label for="Sex">Sex</label>
+                <label for="Sex">Sex</label><br>
                 <label for="male">Male</label>
                 <input type="radio" name="Sex" value="1" id="male" checked>
                 <label for="female">Female</label>
                 <input type="radio" name="Sex" value="0" id="female">
                 <br>
-                <label for="HighBP">Do you have High Blood Pressure?</label>
+                <label for="HighBP">Do you have High Blood Pressure?</label><br>
                 <label for="highbp">Yes</label>
                 <input type="radio" name="HighBP" id="highbp" value="1" checked>
                 <label for="nohighbp">No</label>

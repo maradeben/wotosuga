@@ -1,24 +1,29 @@
+body {
+  background-color: #d9f0e3;
+}
+
 header {
     background: #2980b9;
-    height: 70px;
+    height: 150px;
     width: 100%;
     font-family: Arial;
     border-bottom: 1px solid #558b2f;
+    /*position: fixed;*/
 }
 
 header a {
-    font-size: 28px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   color: #fff;
-  padding: 20px
+  padding: 20px;
+  border: 1px solid #5582bf;
 }
 
 header #logo {
     float: left;
     height: 100%;
-    background: ;
 }
 
 header #dev {
@@ -26,9 +31,28 @@ header #dev {
     height: 100%;
 }
 
+.page-title {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.content-on-image{
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .footer-menu {
-    background-color: #d9f0e3;
+    background-color: transparent;
     padding: 20px 0;
+    align: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,3 +72,8 @@ header #dev {
     text-decoration: none;
 }
 
+.disclaimer {
+  font-style: italic;
+  border: 1px solid #ccc;
+  padding: .5rem;
+}
