@@ -17,7 +17,8 @@ Much of these are still under development at this time.
 
 **URLS**:
 [Project](https://github.com/maradeben/wotosuga)
-[Blog](https://github.com/maradeben/wotosuga)
+
+[Blog](https://medium.com/@maradeben/wotosuga-541276d993c9)
 
 ## Installation & Usage:
 No installation is required for usage. All functionalities can be accessed from the URL provided above.
