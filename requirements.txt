@@ -54,7 +54,7 @@ pytz
 pyzmq
 reportlab==4.0.4
 scikit-learn==1.2.2
-scipy==1.11.2
+scipy==1.11.*
 seaborn
 six
 sniffio==1.3.0
