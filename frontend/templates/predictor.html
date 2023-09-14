@@ -1,4 +1,4 @@
-<!-- {% extends "home.html" %}
+{% extends "home.html" %}
 {% block title %}Wo'tosuga - Predict{% endblock %}
 
 {% block page_header %}
@@ -8,14 +8,8 @@
 {% endblock %}
 
 
-{% block content %} -->
-<html>
-    <header>
-        <link rel="stylesheet" type="text/css" href="../static/styles/form.css">
+{% block content %}
 
-    </header>
-<body>
-    <h1>Some stuff before</h1>
 <div id="padding"></div>
 <form method="post">
     <div class="field">
@@ -70,7 +64,7 @@
         <label for="nostroke">No</label>
         <input type="radio" name="Stroke" id="nostroke" value="0">
     </div>
-    <div>
+    <div class="field">
         <p><label class="field-label" for="HeartDiseaseorAttack">Ever had heart attack or other heart disease?</label></p>
         <label for="heartish">Yes</label>
         <input type="radio" name="HeartDiseaseorAttack" id="heartish" value="1">
@@ -159,6 +153,5 @@
     </div>
     <input type="submit">
 </form>
-</body>
-</html>
-<!-- {% endblock %} -->
+
+{% endblock %}
