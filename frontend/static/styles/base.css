@@ -4,39 +4,91 @@ body {
 
 #main-body {
   padding-top: 150px;
-  /* overflow-y: scroll; */
-  /* height: 100%; */
 }
 
-#coming-soon {
-  background-color: #000;
+#home-page-text {
+  font-size: 18px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 85%;
+  align-self: center;
+  align-items: ceter;
+  align-content: center;
+}
+
+.coming-soon {
+  justify-content: center;
   align-items: center;
+  padding-top: 200px;
+  padding-bottom: 10px;
+  align-self: center;
   text-align: center;
+  /* background-color: rgba(rgb(127, 122, 122), rgb(157, 165, 157), rgb(145, 145, 153), .9); */
+  background-color: #297fb952;
+  z-index: 5;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  text-decoration: solid;
+  font-weight: bold;
 }
 
 #coming-text {
   color: #fff;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 #expect {
-  color: #ccc;
-  font-style: oblique;
+  color: #ddd;
+  font-stretch: narrower;
+  font-size: 30px;
+  text-align: center;
 }
 
-#coming-button {
-    background-color: #2980b9;
-    color: #fff;
-    width: 75%;
-    font-size: 18px;
-    font-weight: bold;
-    border: 1px solid #558b2f;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-    border-radius: 15px;
+#expect ul{
+  list-style: none;
+  font-size: 20px;
 }
 
-#coming-buttton:hover {
-    background-color: #6ab5e7;
-    color: rgb(51, 50, 50);
-    transition: ease-out;
+
+div.predict-button button {
+  background-color: #2980b9;
+  color: #fff;
+  width: 50%;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  /* border: 1px solid #558b2f; */
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  border-radius: 15px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+div.predict-button button:hover {
+  background-color: #6ab5e7;
+  transition: ease-out;
+}
+
+
+div.coming-soon button {
+  background-color: #2980b9;
+  color: #fff;
+  width: 75%;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  /* border: 1px solid #558b2f; */
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  border-radius: 15px;
+}
+
+div.coming-soon button:hover {
+  background-color: #6ab5e7;
+  color: rgb(151, 148, 148);
+  transition: ease-out;
 }

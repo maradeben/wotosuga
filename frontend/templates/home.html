@@ -6,13 +6,14 @@
         <link rel="stylesheet" type="text/css" href="../static/styles/header.css">
         <link rel="stylesheet" type="text/css" href="../static/styles/base.css">
         <link rel="stylesheet" type="text/css" href="../static/styles/form.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/dev.css">
         <link rel="stylesheet" type="text/css" href="../static/styles/footer.css">
     </head>
     <body>
         <header>
             <nav class="header-menu">
                 <p id='logo'><a href="/">WO'TOSUGA</a></p>
-                <p id='dev'><a href="/dev">{dev}:maradeben</a></p>
+                <p id='dev'><a href="/dev">{dev-maradeben}</a></p>
             </nav>
             {% block page_header %}
             <div class="home-header">
@@ -24,6 +25,7 @@
         </header>
         {% block content %}
         <div id="main-body">
+            <div id="home-page-text">
             <p>According to the World Health Organization (WHO), diabetes is a major public health problem. In 2021, an estimated 463 million adults (aged 18 years and older) had diabetes. This number is expected to rise to 642 million by 2040.</p>
             <p>There are a number of things that can be done to reduce the burden of diabetes. These include:</p>
             <ul>
@@ -32,16 +34,18 @@
                 <li>Improving access to care: People with diabetes need access to quality care, including medication, regular checkups, and education.</li>
                 <li>Research: There is ongoing research into new treatments and prevention strategies for diabetes.</li>
             </ul>
-            <p>AI will play a vital role in reducing this burden, and that is why Wo'tosuga is here. With this personal assisstant, you get:
+            <p>AI will play a vital role in reducing this burden, and that is why Wo'tosuga is here. With this personal assisstant, you get:</p>
             <ul>
                 <li>A provisional diagnosis with no  hospitals, labs, or needle-pricks.</li>
                 <li>Access to healthcare providers and specialists involved in various aspects of Diabetes care<li>
                 <li>Educative materials to keep you informed and updated</li>
             </ul>
             
-        <div>
-            <button id="coming-button" onclick="location.href='/predict';">Get your diabetes risk now</button>
-        </div> 
+        <div class="predict-button">
+            <button onclick="location.href='/predict';">Get your diabetes risk now</button>
+        </div>
+    </div>
+    </div>
         {% endblock %}
         <footer>
             <p class="disclaimer">This is only experimental!</p>

@@ -1,0 +1,132 @@
+{% extends "home.html" %}
+{% block title %}Wo'tosuga - Predict{% endblock %}
+
+{% block page_header %}
+<div class="home-header">
+    <h1 class="page-header">Predict</h1>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<form method="post">
+    <label for="name">Name</label>
+    <input type="text" name="Name" id="name" placeholder="Enter name" value="Jane Doe">
+    <br>
+    <label for="age">Age</label>
+    <input type="number" step="1" name="Age" id="age" placeholder="Enter age" value="45">
+    <br>
+    <label for="Sex">Sex</label><br>
+    <label for="male">Male</label>
+    <input type="radio" name="Sex" value="1" id="male" checked>
+    <label for="female">Female</label>
+    <input type="radio" name="Sex" value="0" id="female">
+    <br>
+    <label for="HighBP">Do you have High Blood Pressure?</label><br>
+    <label for="highbp">Yes</label>
+    <input type="radio" name="HighBP" id="highbp" value="1" checked>
+    <label for="nohighbp">No</label>
+    <input type="radio" name="HighBP" id="nohighbp" value="0">
+    <br>
+    <label for="HighChol">Do you have known High Cholesterol?</label>
+    <label for="highchol">Yes</label>
+    <input type="radio" name="HighChol" id="highchol" value="1" checked>
+    <label for="nohighchol">No</label>
+    <input type="radio" name="HighChol" id="nohighchol" value="0">
+    <br>
+    <label for="height">Height(m)</label>
+    <input type="number" step=".01" name="Height" id="height" value="2">
+    <br>
+    <label for="weight">Weight(kg)</label>
+    <input type="number" name="Weight" id="weight" value="87">
+    <br>
+    <label for="sticks">Sticks/day of cigarettes</label>
+    <input type="number" name="SticksDay" id="sticks" value="10">
+    <br>
+    <label for="years">Years smoked</label>
+    <input type="number" name="YearsSmoked" id="years" value="12">
+    <br>
+    <label for="Stroke">Ever had a stroke?</label>
+    <label for="stroke">Yes</label>
+    <input type="radio" name="Stroke" id="stroke" value="1" checked>
+    <label for="nostroke">No</label>
+    <input type="radio" name="Stroke" id="nostroke" value="0">
+    <br>
+    <label for="HeartDiseaseorAttack">Ever had heart attack or other heart disease?</label>
+    <label for="heartish">Yes</label>
+    <input type="radio" name="HeartDiseaseorAttack" id="heartish" value="1" checked>
+    <label for="noheartish">No</label>
+    <input type="radio" name="HeartDiseaseorAttack" id="noheartish" value="0">
+    <br>
+    <label for="PhysActivity">Physical activity in past 30 days apart from job?</label>
+    <label for="activity">Yes</label>
+    <input type="radio" name="PhysActivity" id="activity" value="1" checked>
+    <label for="noactivity">No</label>
+    <input type="radio" name="PhysActivity" id="noactivity" value="0">
+    <br>
+    <label for="Fruits">Do you eat fruits one or more times per day?</label>
+    <label for="fruits">Yes</label>
+    <input type="radio" name="Fruits" id="fruits" value="1" checked>
+    <label for="nofruits">No</label>
+    <input type="radio" name="Fruits" id="nofruits" value="0">
+    <br>
+    <label for="Veggies">Do you consume vegetables one or more times per day?</label>
+    <label for="veggies">Yes</label>
+    <input type="radio" name="Veggies" id="veggies" value="1">
+    <label for="noveggies">No</label>
+    <input type="radio" name="Veggies" id="noveggies" value="0" checked>
+    <br>
+    <label for="HvyAlcoholConsump">Do you consume more than 10 alcoholic drinks weekly?</label>
+    <label for="heavydrink">Yes</label>
+    <input type="radio" name="HvyAlcoholConsump" id="heavydrink" value="1" checked>
+    <label for="noheavydrink">No</label>
+    <input type="radio" name="HvyAlcoholConsump" id="noheavydrink" value="0">
+    <br>
+    <label for="genhlth">How would you rate your health?</label>
+    <select name="GenHlth" id="genhlth">
+        <!-- <option value="none" selected disabled hidden>Select an option</option> -->
+        <option value="1">Excellent</option>
+        <option value="2" selected>Very Good</option>
+        <option value="3">Good</option>
+        <option value="4">Fair</option>
+        <option value="5">Poor</option>
+    </select>
+    <br>
+    <label for="menthlth">No. of odays of poor mental health in past 30 days</label>
+    <input type="number" name="MentHlth" id="menthlth" placeholder="Between 1-30" value="23">
+    <br>
+    <label for="physhlth">No. of odays of poor physical health in past 30 days</label>
+    <input type="number" name="PhysHlth" id="physhlth" placeholder="Between 1-30" value="27">
+    <br>
+    <label for="DiffWalk">Serious difficulty walking or climbing stairs?</label>
+    <label for="diffwalk">Yes</label>
+    <input type="radio" name="DiffWalk" id="diffwalk" value="1" checked>
+    <label for="nodiffwalk">No</label>
+    <input type="radio" name="DiffWalk" id="nodiffwalk" value="0">
+    <label for="education">Education Level</label>
+    <select name="Education" id="education">
+        <!-- <option value="none" selected disabled hidden>Select an option</option> -->
+        <option value="1">Kindergarten/None</option>
+        <option value="2">Elementary/Primary</option>
+        <option value="3">Some High School</option>
+        <option value="4">High School Graduate</option>
+        <option value="5" selected>Some College or Technical School</option>
+        <option value="6">College Graduate</option>
+    </select>
+    <br>
+    <label for="income">Yearly Income Level</label>
+    <select name="Income" id="income">
+        <option value="none" selected disabled hidden>Select an option</option>
+        <option value="1">Less than $10,000</option>
+        <option value="5">Less than $15,000</option>
+        <option value="8">Less than $20,000</option>
+        <option value="4">Less than $25,000</option>
+        <option value="5" selected>Less than $30,000</option>
+        <option value="6">Less than $35,000</option>
+        <option value="7">Less than $75,000</option>
+        <option value="8">$75,000 or more</option>
+    </select>
+    <br>
+    <input type="submit">
+</form>
+{% endblock %}
