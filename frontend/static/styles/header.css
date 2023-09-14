@@ -1,0 +1,103 @@
+header {
+    background: #2980b9;
+    height: 150px;
+    width: 100%;
+    font-family: Arial;
+    border-bottom: 1px solid #558b2f;
+    /* position: fixed; */
+}
+
+header a {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ccc;
+  padding: 20px;
+  border: 1px solid #5582bf;
+}
+
+header #logo {
+    float: left;
+    position: left;
+    height: 100%;
+    /* width: 100%%; */
+}
+
+header #dev {
+    float: right;
+    position: right;
+    height: 100%;
+    /* width: 100%; */
+}
+
+.header-menu {
+    position: relative;
+}
+
+header {
+    clear: both;
+}
+
+.page-header {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+header div.home-header{
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    align-self: center;
+    background-color: #2980b9;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+header div.page-header{
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    align-self: center;
+    background-color: #2980b9;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+header div.home-header h1 {
+    font: sofia-pro arial bold 80px;
+    font-size: 60px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+header div.home-header h3#tagline {
+    font-stretch: narrower;
+    font-style: oblique;
+}
+
+header div.home-header button {
+    background-color: #fff;
+    color: #558b2f;
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #5582bf;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+header div.home-header button:hover {
+    background-color: #ff0000;
+    color: white;
+}

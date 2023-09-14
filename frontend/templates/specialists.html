@@ -1,23 +1,26 @@
 {% extends "home.html" %}
-
 {% block title %}Wo'tosuga - Specialists{% endblock %}
 
-{% block header_image %}{% endblock %}
-
 {% block page_header %}
-<h1 class="page-title">Specialists</h1>
+<h1 class="page-header">Specialists</h1>
 {% endblock %}
 
 {% block content %}
-<p>Find professionals specializing in a vast array of diabetes care duties, including:</p>
-<ul>
-    <li>Endocrinologists & Diabetologists</li>
-    <li>Podiatrists and Diabetic foot specialists</li>
-    <li>Physiotherapists</li>
-    <li>Nutritionists</li>
-    <li>Fitness trainers</li>
-    <li>Pyschiatrists</li>
-    <li>Psychologists</li>
-    <li>Counsellors</li>
-</ul>
+<div class="coming-soon">
+    <p id="coming-text">Coming Soon</p>
+    <div id="expect">
+        <p>Get specialized care from:</p>
+        <ul>
+            <li>Endocrinologists & Diabetologists</li>
+            <li>Podiatrists and Diabetic foot specialists</li>
+            <li>Physiotherapists</li>
+            <li>Nutritionists</li>
+            <li>Fitness trainers</li>
+            <li>Pyschiatrists</li>
+            <li>Psychologists</li>
+            <li>Counsellors</li>
+        </ul>
+    </div>
+    <button id="coming-button" onclick="location.href='/predict';">Check your Diabetes Risk Status</button>
+</div>
 {% endblock %}

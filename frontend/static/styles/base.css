@@ -2,78 +2,41 @@ body {
   background-color: #d9f0e3;
 }
 
-header {
-    background: #2980b9;
-    height: 150px;
-    width: 100%;
-    font-family: Arial;
-    border-bottom: 1px solid #558b2f;
-    /*position: fixed;*/
+#main-body {
+  padding-top: 150px;
+  /* overflow-y: scroll; */
+  /* height: 100%; */
 }
 
-header a {
-  font-size: 28px;
-  font-weight: bold;
+#coming-soon {
+  background-color: #000;
+  align-items: center;
   text-align: center;
-  text-decoration: none;
+}
+
+#coming-text {
   color: #fff;
-  padding: 20px;
-  border: 1px solid #5582bf;
 }
 
-header #logo {
-    float: left;
-    height: 100%;
+#expect {
+  color: #ccc;
+  font-style: oblique;
 }
 
-header #dev {
-    float: right;
-    height: 100%;
+#coming-button {
+    background-color: #2980b9;
+    color: #fff;
+    width: 75%;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #558b2f;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    border-radius: 15px;
 }
 
-.page-title {
-  color: #ffffff;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.content-on-image{
-    justify-content: center;
-    align-items: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-menu {
-    background-color: transparent;
-    padding: 20px 0;
-    align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-menu ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footer-menu ul li a {
-    color: #2980b9;
-    text-decoration: none;
-}
-
-.disclaimer {
-  font-style: italic;
-  border: 1px solid #ccc;
-  padding: .5rem;
+#coming-buttton:hover {
+    background-color: #6ab5e7;
+    color: rgb(51, 50, 50);
+    transition: ease-out;
 }

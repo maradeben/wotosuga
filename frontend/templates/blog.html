@@ -1,5 +1,14 @@
 {% extends "home.html" %}
 {% block title %}Wo'tosuga - Blog{% endblock %}
+
+{% block page_header %}
+<h1 class="page-header">Blog</h1>
+{% endblock %}
+
 {% block content %}
-<h1 class="page-title">Blog</h1>
+<div class="coming-soon">
+    <p id="coming-text">Coming Soon</p>
+    <p id="expect">All the diabetes info and education you need</p>
+    <button id="coming-button" onclick="location.href='/predict';">Check your Diabetes Risk Status</button>
+</div>
 {% endblock %}
