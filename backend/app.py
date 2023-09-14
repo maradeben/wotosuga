@@ -6,7 +6,7 @@ Main entry point of the app
 from fastapi import FastAPI, Request, Form, Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from typing import Union, Any, Dict, Annotated
+from typing import Union, Any, Dict
 from pydantic import BaseModel
 from dataclasses import dataclass
 import os

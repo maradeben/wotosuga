@@ -8,10 +8,11 @@
 {% endblock %}
 
 {% block content %}
+    <div class="results">
             <h1 class="page-title">Results</h1>
             <p>Dear <h2>{{name}},</h2> your results are here.</p>
             <p>BMI: {{bmi}}</p>
-            <p><b>Risk Status: {{diagnosis}}</b></p>
+            <p id="risk-status"><b>Risk Status: {{diagnosis}}</b></p>
             <h3>Analytics</h3>
             <img src="{{ url_for('static', path=diagnosis_plot )}}" alt="Diagnosis Plot">
             <br>
@@ -19,7 +20,7 @@
             <br>
             <img src="{{ url_for('static', path=bmi_distribution_plot )}}", alt="BMI Distribution Plot">
             <h3>Recommendations</h3>
-            <p>Lorem ipsum and stuff. Eat good food and exercise. More stories later.
-                Let's see if this thing works first.
-            </p>
+            <p>Eat good food and exercise.</p>
+             <p>More personalized recommendations coming soon.</p>
+    </div>
 {% endblock %}

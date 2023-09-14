@@ -92,3 +92,13 @@ div.coming-soon button:hover {
   color: rgb(151, 148, 148);
   transition: ease-out;
 }
+
+div.results {
+  padding-top: 200px;
+}
+
+p#risk-status {
+  color: #2980b9;
+  font-weight: bold;
+  font-size: 30px;
+}
