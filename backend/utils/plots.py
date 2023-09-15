@@ -40,7 +40,7 @@ def plot_bmi_dist(bmi, id):
         (fig, save_path) (plt.figure, str(path where file is saved))
     """
 
-    fig = plt.figure(figsize=(5,4))
+    fig = plt.figure(figsize=(4,3))
     bins = np.arange(df.BMI.min(), df.BMI.max()+1, 1)
     plt.hist(data=df, x='BMI', bins=bins);
     plt.bar(x=bmi, height=28000, width=.3, color='red', hatch='/')
@@ -53,7 +53,7 @@ def plot_bmi_dist(bmi, id):
     plt.ylabel('Frequency', fontdict=axes_style)
 
     save_path = f"charts/{id}-bmi_dist.jpg"
-    plt.savefig(os.path.join(static_dir, save_path), dpi=200)
+    plt.savefig(os.path.join(static_dir, save_path), bbox_inches='tight', dpi=200)
 
     return (fig, save_path)
 
@@ -68,15 +68,15 @@ def plot_diag_by_bmi_sex(diag, sex, id):
         figure(plt.figure)
     """
 
-    fig = plt.figure(figsize=(5,4))
+    fig = plt.figure(figsize=(4,3))
     g = sns.barplot(data=df, x='Sex', y='BMI', hue='Diabetes_01');
 
     idx = 0
     if sex==0 and diag==0: # female, non-diabetic
         idx = 0
-    elif sex==0 and diag==1: # female, diabetic
-        idx = 1
     elif sex==1 and diag==0: # male, non-diabetic
+        idx = 1
+    elif sex==0 and diag==1: # female, diabetic
         idx = 2
     elif sex==1 and diag==1: # male, diabetic
         idx=3
@@ -93,7 +93,7 @@ def plot_diag_by_bmi_sex(diag, sex, id):
         t.set_text(l)
     
     save_path = f"charts/{id}-diag_bmi_sex.jpg"
-    plt.savefig(os.path.join(static_dir, save_path), dpi=200)
+    plt.savefig(os.path.join(static_dir, save_path), bbox_inches='tight', dpi=200)
     
     return (fig, save_path)
 
@@ -125,7 +125,7 @@ def plot_bmi_category(bmi, id):
     """
 
     df['BMICategory'] = df.BMI.apply(categorize_bmi)
-    fig=plt.figure(figsize=(5,4))
+    fig=plt.figure(figsize=(4,3))
     g = sns.countplot(data=df, y='BMICategory', color=primary, orient='h', order = [5,4,3,2,1]);
 
     g.patches[5 - (categorize_bmi(bmi))].set_edgecolor('red')
@@ -137,7 +137,7 @@ def plot_bmi_category(bmi, id):
     plt.title('BMI Categories', fontdict=title_style);
 
     save_path = f"charts/{id}-bmi_cat.jpg"
-    plt.savefig(os.path.join(static_dir, save_path), dpi=200)
+    plt.savefig(os.path.join(static_dir, save_path), bbox_inches='tight', dpi=200)
 
     return (fig, save_path)
 
