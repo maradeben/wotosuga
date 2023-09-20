@@ -17,8 +17,7 @@ matplotlib
 numpy
 packaging==23.1
 pandas
-Pillow==10.0.0
-pip==23.2.1
+Pillow
 pydantic==2.3.0
 pydantic_core==2.6.3
 pyparsing==3.0.9
